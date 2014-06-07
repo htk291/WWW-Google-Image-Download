@@ -15,8 +15,7 @@ sub new {
     my ($class, $opt) = @_;
     bless {
         q => $opt // '寺川愛美',
-        rsz => 'large',
-        dir => '/users/htk291/OneDrive/Github/Google-Image-Download/eg/data',
+        dir => './eg/data',
     }, $class;
 }
 
@@ -26,16 +25,15 @@ sub download {
     my $google = WebService::Simple->new(
         base_url => 'http://ajax.googleapis.com/ajax/services/search/images',
         response_parser => 'JSON',
-        params => { v => '1.0', rsz => $self->{rsz}, hl => 'ja' }
+        params => { v => '1.0', rsz => '1', hl => 'ja' }
     );
 
     my $response = $google->get({ q => $self->{q}, start => 0 });
     my $imageUrl = $response->parse_response->{responseData}{results}[0]->{url};
-
-    my $res = $ua->get(
-                        $imageUrl,
-                        ':content_file' => $dir->file( basename($imageUrl) )->stringify
-                      );
+    $ua->get(
+              $imageUrl,
+              ':content_file' => $dir->file( basename($imageUrl) )->stringify
+            );
 }
 
 1;
