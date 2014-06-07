@@ -1,4 +1,4 @@
-package Google::Image::Download;
+package WebService::Google::Image::Download;
 use strict;
 use warnings;
 use Carp;
@@ -24,7 +24,7 @@ sub download {
     my $dir  = dir( $self->{dir} );
     my $google = WebService::Simple->new(
         base_url => 'http://ajax.googleapis.com/ajax/services/search/images',
-        params => { v => '1.0', rsz => '1', hl => 'ja' }
+        params   => { v => '1.0', rsz => '1', hl => 'ja' },
         response_parser => 'JSON',
     );
 
@@ -41,19 +41,19 @@ __END__
 
 =head1 NAME
 
-Google::Image::Download - [Download Images using Google Search API]
+WebService::Google::Image::Download - [Download Images using Google Search API]
 
 
 =head1 VERSION
 
-This document describes Google::Image::Download version 0.0.1
+This document describes WebService::Google::Image::Download version 0.0.1
 
 
 =head1 SYNOPSIS
 
-    use Google::Image::Download;
+    use WebService::Google::Image::Download;
 
-    my $google = Google::Image::Download->new(
+    my $google = WebService::Google::Image::Download->new(
                     '__WHAT_TO_DOWNLOAD__',
     );
 
@@ -61,16 +61,16 @@ This document describes Google::Image::Download version 0.0.1
 
 =head1 DESCRIPTION
 
-Google::Image::Download is Downloads Images using Google Search API
+WebService::Google::Image::Download is Downloads Images using Google Search API
 
 
 =head1 METHODS 
 
-* Google::Image::Download->new()
+* WebService::Google::Image::Download->new()
 
     ```
 
-    Google::Image::Download->new(
+    WebService::Google::Image::Download->new(
             '__WHAT_TO_DOWNLOAD__',
     );
 

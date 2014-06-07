@@ -2,7 +2,7 @@ use strict;
 use Test::More;
 
 use_ok $_ for qw(
-    Google::Image::Download
+    WebService::Google::Image::Download
 );
 
 done_testing;

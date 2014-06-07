@@ -1,14 +1,14 @@
 #NAME
 
-Google::Image::Download - Download Images using Google Search API (for Module!!)
+WebService::Google::Image::Download - Download Images using Google Search API (for Module!!)
 
 version 0.0.1
 
 #SYNOPSIS
 
-    use Google::Image::Download;
+    use WebService::Google::Image::Download;
 
-    my $google = Google::Image::Download->new(
+    my $google = WebService::Google::Image::Download->new(
                     '__WHAT_TO_DOWNLOAD__',
     );
 
@@ -16,15 +16,15 @@ version 0.0.1
 
 #DESCRIPTION
 
-Google::Image::Download is Downloads Images using Google Search API (for Module!!)
+WebService::Google::Image::Download is Downloads Images using Google Search API (for Module!!)
 
 #METHODS
 
-* Google::Image::Download->new()
+* WebService::Google::Image::Download->new()
 
     ```
 
-    Google::Image::Download->new(
+    WebService::Google::Image::Download->new(
             '__WHAT_TO_DOWNLOAD__',
     );
 
