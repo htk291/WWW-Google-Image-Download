@@ -34,7 +34,7 @@ Google::Image::Download is Downloads Images using Google Search API (for Module!
 
 * $google->download()
 
-    Start download.
+    Start downloading.
 
 #SEE ALSO
 
