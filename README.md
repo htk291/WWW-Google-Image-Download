@@ -14,8 +14,6 @@ Google::Image::Download is Downloads Images using Google Search API (for Module!
 
 #SEE ALSO
 
-
-
 #LICENCE
 
 Copyright (C) 2014, Hideaki Takahashi
