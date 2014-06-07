@@ -6,8 +6,6 @@ version 0.0.1
 
 #SYNOPSIS
 
-
-    ```
     use Google::Image::Download;
 
     my $google = Google::Image::Download->new(
@@ -15,8 +13,6 @@ version 0.0.1
     );
 
     $google->download;
-
-    ```
 
 #DESCRIPTION
 
@@ -34,7 +30,7 @@ Google::Image::Download is Downloads Images using Google Search API (for Module!
 
     ```
 
-    Without argument, it works correctly.
+    Without argument... still works correctly.
 
 * $google->download()
 
