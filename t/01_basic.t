@@ -20,7 +20,7 @@ subtest 'on new()' => sub {
 
 subtest 'on download()' => sub {
     
-    subtest 'temp' => sub {
+    subtest 'download' => sub {
         my $obj = Google::Image::Download->new;
         $obj->download;
         is 1, 1;

@@ -14,7 +14,7 @@ my $ua = LWP::UserAgent->new;
 sub new {
     my ($class, $opt) = @_;
     bless {
-        q => $opt // '寺川愛美',
+        q   => $opt // '寺川愛美',
         dir => './eg/data',
     }, $class;
 }
@@ -24,8 +24,8 @@ sub download {
     my $dir  = dir( $self->{dir} );
     my $google = WebService::Simple->new(
         base_url => 'http://ajax.googleapis.com/ajax/services/search/images',
-        response_parser => 'JSON',
         params => { v => '1.0', rsz => '1', hl => 'ja' }
+        response_parser => 'JSON',
     );
 
     my $response = $google->get({ q => $self->{q}, start => 0 });
