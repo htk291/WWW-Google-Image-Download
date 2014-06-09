@@ -9,33 +9,34 @@ use WebService::Simple;
 
 our $VERSION = '0.0.1';
 
-my $ua = LWP::UserAgent->new;
-
 sub new {
     my ($class, $opt) = @_;
     bless {
-        q   => $opt // '寺川愛美',
-        dir => './eg/data',
+        dir     => './eg/data',
+        ua      => LWP::UserAgent->new,
+        google  => WebService::Simple->new(
+            base_url => 'http://ajax.googleapis.com/ajax/services/search/images',
+            params   => { v => '1.0', rsz => '1', hl => 'ja' },
+            response_parser => 'JSON',
+        ),
     }, $class;
 }
 
 sub download {
-    my $self = shift;
+    my ($self, $arg) = @_;
     my $dir  = dir( $self->{dir} );
-    my $google = WebService::Simple->new(
-        base_url => 'http://ajax.googleapis.com/ajax/services/search/images',
-        params   => { v => '1.0', rsz => '1', hl => 'ja' },
-        response_parser => 'JSON',
-    );
-
-    my $response = $google->get({ q => $self->{q}, start => 0 });
-    my $imageUrl = $response->parse_response->{responseData}{results}[0]->{url};
-    $ua->get(
+    my $imageUrl = get_url($self, $arg, $dir);
+    $self->{ua}->get(
               $imageUrl,
               ':content_file' => $dir->file( basename($imageUrl) )->stringify
             );
 }
 
+sub get_url {
+    my ($self, $arg, $dir) = @_;
+    my $response = $self->{google}->get({ q => $arg // '寺川愛美', start => 0 });
+    $response->parse_response->{responseData}{results}[0]->{url};
+}
 1;
 __END__
 
