@@ -1,7 +1,7 @@
 use strict;
 use warnings;
-use WebService::Google::Image::Download;
+use WWW::Google::Image::Download;
 
-my $obj = WebService::Google::Image::Download->new('三森すずこ');
+my $obj = WWW::Google::Image::Download->new('三森すずこ');
 $obj->download;
 

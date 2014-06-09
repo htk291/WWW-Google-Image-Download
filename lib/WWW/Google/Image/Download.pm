@@ -1,4 +1,4 @@
-package WebService::Google::Image::Download;
+package WWW::Google::Image::Download;
 use strict;
 use warnings;
 use Carp;
@@ -41,19 +41,19 @@ __END__
 
 =head1 NAME
 
-WebService::Google::Image::Download - [Download Images using Google Search API]
+WWW::Google::Image::Download - [Download Images using Google Search API]
 
 
 =head1 VERSION
 
-This document describes WebService::Google::Image::Download version 0.0.1
+This document describes WWW::Google::Image::Download version 0.0.1
 
 
 =head1 SYNOPSIS
 
-    use WebService::Google::Image::Download;
+    use WWW::Google::Image::Download;
 
-    my $google = WebService::Google::Image::Download->new(
+    my $google = WWW::Google::Image::Download->new(
                     '__WHAT_TO_DOWNLOAD__',
     );
 
@@ -61,16 +61,16 @@ This document describes WebService::Google::Image::Download version 0.0.1
 
 =head1 DESCRIPTION
 
-WebService::Google::Image::Download is Downloads Images using Google Search API
+WWW::Google::Image::Download is Downloads Images using Google Search API
 
 
 =head1 METHODS 
 
-* WebService::Google::Image::Download->new()
+* WWW::Google::Image::Download->new()
 
     ```
 
-    WebService::Google::Image::Download->new(
+    WWW::Google::Image::Download->new(
             '__WHAT_TO_DOWNLOAD__',
     );
 
