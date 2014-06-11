@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use Carp;
 use File::Basename;
+use FindBin;
 use LWP::UserAgent;
 use Path::Class qw/ dir file /;
 use WebService::Simple;
@@ -12,7 +13,7 @@ our $VERSION = '0.0.1';
 sub new {
     my ($class, $opt) = @_;
     bless {
-        dir     => './eg/data',
+        dir     => "$FindBin::Bin/data" ,
         ua      => LWP::UserAgent->new,
         google  => WebService::Simple->new(
             base_url => 'http://ajax.googleapis.com/ajax/services/search/images',
@@ -25,6 +26,7 @@ sub new {
 sub download {
     my ($self, $arg) = @_;
     my $dir  = dir( $self->{dir} );
+    $dir->mkpath;
     my $imageUrl = get_url($self, $arg, $dir);
     $self->{ua}->get(
               $imageUrl,
