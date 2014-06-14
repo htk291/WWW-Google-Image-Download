@@ -32,7 +32,7 @@ WWW::Google::Image::Download is Downloads Images using Google Search API
             '__WHAT_TO_DOWNLOAD__',
     );
 
-Start downloading.
+Start downloading.  
 Without argument... still works correctly.
 
 # LICENCE

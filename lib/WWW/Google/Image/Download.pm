@@ -82,7 +82,7 @@ WWW::Google::Image::Download is Downloads Images using Google Search API
     );
 
 
-Start downloading.
+Start downloading.  
 Without argument... still works correctly.
 
 
