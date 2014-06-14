@@ -1,0 +1,68 @@
+{
+   "abstract" : "[Download Images using Google Search API]",
+   "author" : [
+      ", Hideaki Takahashi"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v1.1.0, CPAN::Meta::Converter version 2.140640",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "WWW-Google-Image-Download",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author",
+         "builder"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Prereqs" : "0",
+            "Module::Build" : "0.38"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion::Fast" : "0.04",
+            "Test::PAUSE::Permissions" : "0.04",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.7"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::Mock::Guard" : "0",
+            "Test::More" : "0"
+         }
+      }
+   },
+   "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/htk291/WebService-Google-Image-Download/issues"
+      },
+      "homepage" : "https://github.com/htk291/WebService-Google-Image-Download",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/htk291/WebService-Google-Image-Download.git",
+         "web" : "https://github.com/htk291/WebService-Google-Image-Download"
+      }
+   },
+   "version" : "0.0.1",
+   "x_contributors" : [
+      "htk291 <htk0129@gmail.com>"
+   ]
+}

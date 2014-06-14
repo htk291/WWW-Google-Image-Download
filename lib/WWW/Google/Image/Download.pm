@@ -56,11 +56,11 @@ This document describes WWW::Google::Image::Download version 0.0.1
 
     use WWW::Google::Image::Download;
 
-    my $google = WWW::Google::Image::Download->new(
-                    '__WHAT_TO_DOWNLOAD__',
+    my $google = WWW::Google::Image::Download->new;
+    $google->download(
+                '__WHAT_TO_DOWNLOAD__',
     );
 
-    $google->download;
 
 =head1 DESCRIPTION
 
@@ -69,21 +69,25 @@ WWW::Google::Image::Download is Downloads Images using Google Search API
 
 =head1 METHODS 
 
-* WWW::Google::Image::Download->new()
+* WWW::Google::Image::Download->new
+
+    ```
+    WWW::Google::Image::Download->new;
 
     ```
 
-    WWW::Google::Image::Download->new(
+* $google->download
+
+    ```
+    my $google = WWW::Google::Image::Download->new;
+    $google->download(
             '__WHAT_TO_DOWNLOAD__',
     );
 
     ```
 
-    Without argument... still works correctly.
-
-* $google->download()
-
     Start downloading.
+    Without argument... still works correctly.
 
 
 =head1 LICENCE

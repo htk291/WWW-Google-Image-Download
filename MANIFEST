@@ -1,8 +1,0 @@
-Build.PL
-Changes
-lib/WWW/Google/Image/Download.pm
-Makefile.PL
-MANIFEST			This list of files
-README.md
-cpanfile
-t/00.compile.t

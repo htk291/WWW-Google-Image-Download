@@ -1,52 +1,53 @@
-#NAME
+# NAME
 
-WWW::Google::Image::Download - Download Images using Google Search API (for Module!!)
+WWW::Google::Image::Download - \[Download Images using Google Search API\]
 
-version 0.0.1
+# VERSION
 
-#SYNOPSIS
+This document describes WWW::Google::Image::Download version 0.0.1
+
+# SYNOPSIS
 
     use WWW::Google::Image::Download;
 
-    my $google = WWW::Google::Image::Download->new(
-                    '__WHAT_TO_DOWNLOAD__',
+    my $google = WWW::Google::Image::Download->new;
+    $google->download(
+                '__WHAT_TO_DOWNLOAD__',
     );
 
-    $google->download;
+# DESCRIPTION
 
-#DESCRIPTION
+WWW::Google::Image::Download is Downloads Images using Google Search API
 
-WWW::Google::Image::Download is Downloads Images using Google Search API (for Module!!)
+# METHODS 
 
-#METHODS
+\* WWW::Google::Image::Download->new
 
-* WWW::Google::Image::Download->new()
+    ```
+    WWW::Google::Image::Download->new;
 
     ```
 
-    WWW::Google::Image::Download->new(
+\* $google->download
+
+    ```
+    my $google = WWW::Google::Image::Download->new;
+    $google->download(
             '__WHAT_TO_DOWNLOAD__',
     );
 
     ```
 
+    Start downloading.
     Without argument... still works correctly.
 
-* $google->download()
-
-    Start downloading.
-
-#SEE ALSO
-
-[googleImageDownload](https://github.com/htk291/googleImageDownload) - simple script for download image
-
-#LICENCE
+# LICENCE
 
 Copyright (C) 2014, Hideaki Takahashi
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
-#AUTHOR
+# AUTHOR
 
-htk291 [htk291@gmail.com](htk291@gmail.com)
+Hideaki Takahashi \[htk291@gmail.com\](htk291@gmail.com)

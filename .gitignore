@@ -1,3 +1,6 @@
+/WWW-Google-Image-Download-*
+/.build
+!META.json
 *.jpg
 *.jpeg
 *.png
