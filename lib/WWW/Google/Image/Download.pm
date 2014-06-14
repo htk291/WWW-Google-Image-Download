@@ -96,5 +96,4 @@ it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-Hideaki Takahashi [htk291@gmail.com](htk291@gmail.com)
-
+Hideaki Takahashi E<lt>htk291@gmail.comE<gt>

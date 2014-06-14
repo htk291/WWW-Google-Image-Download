@@ -44,4 +44,4 @@ it under the same terms as Perl itself.
 
 # AUTHOR
 
-Hideaki Takahashi \[htk291@gmail.com\](htk291@gmail.com)
+Hideaki Takahashi <htk291@gmail.com>
