@@ -23,23 +23,17 @@ WWW::Google::Image::Download is Downloads Images using Google Search API
 
 \* WWW::Google::Image::Download->new
 
-    ```
     WWW::Google::Image::Download->new;
-
-    ```
 
 \* $google->download
 
-    ```
     my $google = WWW::Google::Image::Download->new;
     $google->download(
             '__WHAT_TO_DOWNLOAD__',
     );
 
-    ```
-
-    Start downloading.
-    Without argument... still works correctly.
+Start downloading.
+Without argument... still works correctly.
 
 # LICENCE
 
